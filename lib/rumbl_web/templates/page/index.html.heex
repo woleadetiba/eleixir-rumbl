@@ -1,0 +1,24 @@
+<section class="phx-hero">
+  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
+  <p>Some demostration capabilities...</p>
+
+  <ul>
+    <li><%= link "Users", to: Routes.user_path(@conn, :index) %></li>
+  </ul>
+</section>
+
+<section class="row">
+  <article class="column">
+    <h2>Resources</h2>
+    <ul>
+      Footer Link goes here ...
+
+    </ul>
+  </article>
+  <article class="column">
+    <h2>Help</h2>
+    <ul>
+      Help Like goes here...
+    </ul>
+  </article>
+</section>

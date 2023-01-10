@@ -1,0 +1,17 @@
+<h1>Listing Users</h1>
+<table>
+<%= for user <- @users do %>
+<tr>
+<td><b>
+<%= render "user.html", user: user %>
+</td>
+<td><%= link "View", to: Routes.user_path(@conn, :show, user.id) %></td>
+<td><%= link "Delete", to: Routes.user_path(@conn, :delete, user.id), method: :delete, data: [confirm: "Are you sure?"] %></td>
+</tr>
+<% end %>
+</table>
+
+<span><%= link "New User", to: Routes.user_path(@conn, :new) %></span>
+
+<br>
+<li><%= link "Home", to: Routes.page_path(@conn, :index) %></li>
